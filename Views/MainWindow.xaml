@@ -20,5 +20,17 @@
                 <MenuItem Header="О программе"/>
             </MenuItem>
         </Menu>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Content="Запуск камеры"/>
+                <Button Content="Остановить"/>
+                <Separator/>
+                <Button Content="Диагностика"/>
+                <Button Content="Настройки"/>
+                <Button Content="Обновить"/>
+
+            </ToolBar>
+        </ToolBarTray>
     </DockPanel>
+    
 </Window>
