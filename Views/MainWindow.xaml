@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FaceRecognition"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
+    <DockPanel LastChildFill="False">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Файл">
                 <MenuItem Header="Настройки"/>
@@ -32,6 +32,32 @@
             </ToolBar>
         </ToolBarTray>
 
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Margin="5">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Text="Список студентов" FontWeight="Bold" Margin="5" TextAlignment="Center" />
+                    <ListBox>
+                        <ListBoxItem>Иванов Иван (1ПБ25Н)</ListBoxItem>
+                        <ListBoxItem>Иванов Иван (1ПБ25Н)</ListBoxItem>
+                        <ListBoxItem>Иванов Иван (1ПБ25Н)</ListBoxItem>
+                        <ListBoxItem>Иванов Иван (1ПБ25Н)</ListBoxItem>
+                    </ListBox>
+
+                </DockPanel>
+            </Border>
+            <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Width="5"/>
+            <Border Grid.Column="2" BorderBrush="Gray" BorderThickness="1" Margin="5" Width="500">
+                <Grid Background="LightGray">
+                    <TextBlock Text="Область Видео" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DarkGray" FontSize="20"/>
+                </Grid>
+            </Border>
+        </Grid>
+        
         <StatusBar DockPanel.Dock="Bottom">
             <StatusBarItem>
                 <TextBlock Text="Готов к работе"/>
